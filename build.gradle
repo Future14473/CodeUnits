@@ -1,0 +1,23 @@
+//plugins {
+//    id 'java'
+//}
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    def junit5Version = '5.6.2'
+    dependencies {
+        testImplementation "org.junit.jupiter:junit-jupiter-api:$junit5Version"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit5Version"
+    }
+
+
+//Junit5 config
+    test {
+        useJUnitPlatform()
+    }
+
+}
